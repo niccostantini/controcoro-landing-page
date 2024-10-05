@@ -1,2 +1,1 @@
-# template-repository
-Template repo for standard web dev
+# Bozz Langin page ControCoro
