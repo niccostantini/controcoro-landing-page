@@ -1,8 +1,9 @@
 import "./normalize.css"
 import "./styles.css"
 import Chart from 'chart.js/auto';
+import Muted from "./assets/images/muted.png"
+import Unmuted from "./assets/images/unmuted.png"
 import ChartDataLabels from 'chartjs-plugin-datalabels';
-import "./assets/images/logo.svg"
 
 /**COUNTUP ANIMATION */
 document.addEventListener("DOMContentLoaded", function() {
@@ -158,4 +159,18 @@ document.addEventListener("DOMContentLoaded", function() {
     sections.forEach(section => {
         observer.observe(section);
     });
+});
+
+/**TOGGLE MUTE VIDEO */
+document.getElementById("unmuteButton").addEventListener("click", function() {
+    const muted = "<img src='./assets/images/muted.png'>";
+    const unmuted = "<img src='./assets/images/unmuted.png'>";
+    const video = document.getElementById("backgroundVideo");
+    if (video.muted) {
+        video.muted = !video.muted;
+        this.innerHTML = unmuted;
+    } else {
+        video.muted = !video.muted;
+        this.innerHTML = muted;
+    }
 });
