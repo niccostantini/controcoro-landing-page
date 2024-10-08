@@ -163,8 +163,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /**TOGGLE MUTE VIDEO */
 document.getElementById("unmuteButton").addEventListener("click", function() {
-    const muted = "<img src='./assets/images/muted.png'>";
-    const unmuted = "<img src='./assets/images/unmuted.png'>";
+    const muted = "<img src='https://raw.githubusercontent.com/niccostantini/controcoro-landing-page/refs/heads/main/src/assets/images/muted.png'>";
+    const unmuted = "<img src='https://raw.githubusercontent.com/niccostantini/controcoro-landing-page/refs/heads/main/src/assets/images/unmuted.png'>";
     const video = document.getElementById("backgroundVideo");
     if (video.muted) {
         video.muted = !video.muted;
