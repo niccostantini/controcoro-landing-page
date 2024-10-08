@@ -3,6 +3,7 @@ import "./styles.css"
 import Chart from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
+/**COUNTUP ANIMATION */
 document.addEventListener("DOMContentLoaded", function() {
     const countupElement = document.getElementById("countup");
     const target = 34; // The final value to count up to
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+/**GRAFICO A TORTA */
 const ctx = document.getElementById('choirChart').getContext('2d');
 const choirChart = new Chart(ctx, {
     type: 'pie',
@@ -86,7 +88,7 @@ const choirChart = new Chart(ctx, {
                 anchor: 'center',
                 align: 'center',
                 offset: 0,
-                borderRadius: 4,
+                borderRadius: 5,
                 backgroundColor: 'rgba(255, 255, 255, 0.8)',
                 borderWidth: 1,
                 borderColor: '#ccc'
@@ -95,6 +97,7 @@ const choirChart = new Chart(ctx, {
     }
 });
 
+/**APPEARING TEXT ANIMATION "IL CONTROCORO È..." */
 document.addEventListener("DOMContentLoaded", function() {
     const phrases = [
         "il coro di Spin Time Labs.",
