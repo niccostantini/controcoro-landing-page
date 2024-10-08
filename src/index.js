@@ -45,10 +45,10 @@ const choirChart = new Chart(ctx, {
             label: 'Totale',
             data: [7, 6, 14, 7],
             backgroundColor: [
-                '#ff9999', // Bass
-                '#66b3ff', // Tenors
-                '#99ff99', // Altos
-                '#ffcc99'  // Sopranos
+                '#e43b3bff', // Bass
+                '#568ea3ff', // Tenors
+                '#5fb75f', // Altos
+                '#dba159ff'  // Sopranos
             ],
             borderColor: '#ffffff',
             borderWidth: 2
