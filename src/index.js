@@ -94,3 +94,45 @@ const choirChart = new Chart(ctx, {
         }
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const phrases = [
+        "il coro di Spin Time Labs.",
+        "aperto a tuttə.",
+        "per musicisti e no.",
+        "di sinistra.",
+        "divertente ed economico.",
+        "inclusivo.",
+    ];
+
+    const textElement = document.getElementById("controcoroText");
+    let currentPhraseIndex = 0;
+    const animationDuration = 3500; // Duration for each phrase in milliseconds (5 seconds)
+
+    // Function to display the next phrase with a typewriter animation
+    function typePhrase(phrase) {
+        textElement.innerHTML = ""; // Clear existing text
+        let charIndex = 0;
+
+        function typeNextChar() {
+            if (charIndex < phrase.length) {
+                textElement.innerHTML += phrase[charIndex].replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+                charIndex++;
+                setTimeout(typeNextChar, 100); // Set delay for typing next character
+            }
+        }
+        typeNextChar();
+    }
+
+    // Function to change to the next phrase
+    function changePhrase() {
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        typePhrase(phrases[currentPhraseIndex]);
+    }
+
+    // Start the typewriter animation for the initial phrase
+    typePhrase(phrases[currentPhraseIndex]);
+
+    // Set interval to change the phrase every 5 seconds
+    setInterval(changePhrase, animationDuration);
+});
