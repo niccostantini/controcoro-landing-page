@@ -43,6 +43,7 @@ r {
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between;;
     background-color: var(--imperial-red);
     color: var(--creamy-white);
     position: sticky;
@@ -52,6 +53,17 @@ header {
 
     h1 {
         padding-left: 25px;
+    }
+
+    svg {
+        height: 70px;
+        width: 70px;
+        padding-right: 25px;
+        
+        path {
+            fill: var(--creamy-white);
+        }
+
     }
 
 }
