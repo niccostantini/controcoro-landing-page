@@ -2,6 +2,7 @@ import "./normalize.css"
 import "./styles.css"
 import Chart from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import "./assets/images/logo.svg"
 
 /**COUNTUP ANIMATION */
 document.addEventListener("DOMContentLoaded", function() {
@@ -138,4 +139,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Set interval to change the phrase every 5 seconds
     setInterval(changePhrase, animationDuration);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll(".fadein");
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 1.0
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });
